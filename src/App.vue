@@ -1,28 +1,34 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <h5-player id="play_wind" :code="code"></h5-player>
+    <hik-com id="hik_wind" :code="code"></hik-com>
   </div>
 </template>
 
 <script>
 import HelloWorld from './components/HelloWorld.vue'
+import h5Player from './components/h5Play.vue'
+import hikCom from './components/hikCom.vue'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
-  }
+    HelloWorld,
+    h5Player,
+    hikCom,
+  },
+  data() {
+    return {
+      code: 'xxxxxxxxxx'
+    }
+  },
 }
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+#play_wind, #hik_wind {
+  width: 600px;
+  height: 300px;
+  margin-top: 20px
 }
 </style>
